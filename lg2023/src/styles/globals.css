@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.hero-image{
+    height: 700px;
+}
+
+.darkened{
+    background-color: rgba(0, 0, 0, 0.15)
+}
+.navbar{
+  
+    background-color: rgba(0, 0, 0, 0.25);
+    
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+.harmonogram-item::after{
+    
+    border-left: solid 2px #e3c364;
+    
+}
+
+* {
+     border: red solid 1px;
+}
+
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #e3c364;
+height: 52rem; 
+    left: 50%;
+    margin-left: -1px;
+  }
