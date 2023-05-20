@@ -3,7 +3,23 @@
 @tailwind utilities;
 
 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+@import url('https://fonts.googleapis.com/css2?Open+Sans&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
+.kaushan-script{
+    font-family: 'Kaushan Script';
+}
+.belleza{
+    font-family: 'Belleza', sans-serif;
+}
+.opensans{
+    font-family: "Open Sans", sans-serif;
+}
 .hero-image{
     height: 700px;
 }
@@ -11,11 +27,7 @@
 .darkened{
     background-color: rgba(0, 0, 0, 0.15)
 }
-.navbar{
-  
-    background-color: rgba(0, 0, 0, 0.25);
-    
-}
+
 
 *,
 *::before,
@@ -35,9 +47,7 @@ body {
     
 }
 
-* {
-     border: red solid 1px;
-}
+
 
 
 .timeline::after {

@@ -4,15 +4,21 @@ import hearts_gold from "./assets/hearts_gold.png";
 import gold_heart from "./assets/gold_heart.png";
 import hulin from "./assets/hulin_resort.jpg";
 import { Nadpis } from "@/components/Nadpis";
-import CountdownTimer from "@/components/CountDown";
+
+
+import { Kaushan_Script } from "next/font/google"
+import { Open_Sans } from "next/font/google";
+
+const kaushan = Kaushan_Script({subsets: ["latin"], weight:"400"})
+const opensans = Open_Sans({subsets: ["latin"], weight:"400"})
 
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col justify-center">
+      <main className={`${kaushan.className}flex flex-col justify-center`}>
         <section className="hero">
-          <div className="relative z-0 overflow-hidden bg-[url('../pages/assets/gold_marble.jpeg')] bg-no-repeat bg-bottom bg-cover hero-image">
             <Navbar />
+          <div className="relative z-0 overflow-hidden bg-[url('../pages/assets/gold_marble.jpeg')] bg-no-repeat bg-bottom bg-cover hero-image">
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed darkened">
               <div className="flex justify-center items-center h-full">
                 <div className="text-center text-white px-6 md:px-12">
@@ -27,47 +33,40 @@ export default function Home() {
             </div>
           </div>
         </section>
+<div className="flex flex-row justify-center mt-16">
 
+        <Nadpis  headingText="Náš příběh" />
+</div>
         <section
           id="our-story"
-          className="flex flex-col  items-center justify-center w-2/4 mx-auto mt-12"
+          className="flex flex-col  items-center justify-center w-2/4 max-w-full mx-auto mt-6"
         >
-          <Nadpis headingText="Náš příběh"/>
 
-         
-              <p className="text-lg text-center mb-12 p-2">
-                Před pěti lety jsme se díky vítězné fotografii ze čtyřhry
-                seznámili a začali společnou cestu životem. <br /> S radostí se
-                s Vámi podělíme o pět našich nejkrásnějších prvních společných
-                okamžiků.
-              </p>
-            <div className="flex flex-row   sm:flex-col">
-
-
-              <div className="flex flex-col gap-8  "> 
-
+          <p className="text-lg text-center mb-12 p-2">
+            Před pěti lety jsme se díky vítězné fotografii ze čtyřhry seznámili
+            a začali společnou cestu životem. <br /> S radostí se s Vámi
+            podělíme o pět našich nejkrásnějších prvních společných okamžiků.
+          </p>
+          <div className="flex flex-row   sm:flex-col">
+            <div className="flex flex-col gap-8  ">
               <div className="  flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
-                <div className="w-80 h-60 bg-gray-500 "></div>
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full timeline invisible md:visible"></div>
                 <p className="text-lg text-justify w-1/2 md:w-80 p-2">
                   Na prvním místě stojí první polibek, který jsme si dali v
                   zámeckém parku na Dobříši v srpnu 2018.
                 </p>
               </div>{" "}
-
-
               <div className="flex flex-col  justify-between items-center md:flex-row gap-6">
-                <div className="w-80 h-60 bg-gray-500"></div>
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
                 <p className="text-lg text-justify w-1/2 md:w-80">
                   Těžko bychom zapomněli na naše první společné vaření, kdy jsme
                   si navzájem umíchali tatarák a spálili všechny topinky.
                 </p>
               </div>{" "}
-
-
               <div className="flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
-                <div className="w-80 h-60 bg-gray-500"></div>
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
                 <p className="text-lg text-justify w-1/2 md:w-80 p-2">
                   Vzpomínáme také na naše první Vánoce, které jsme strávili v
@@ -75,86 +74,77 @@ export default function Home() {
                   <i>"nákupu"</i> stromečku.
                 </p>
               </div>
-
-
               <div className="flex flex-col justify-between items-center md:flex-row gap-6">
-                <div className="w-80 h-60 bg-gray-500"></div>
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
                 <p className="text-lg text-justify w-1/2 md:w-80 p-2">
                   Dalším zážitkem byla naše první dovolená v Egyptě v březnu
                   roku 2019. Jako poslední jsme si nechali naše společné
                   bydlení, které započalo v září roku 2019.
                 </p>
+              </div>
+            </div>
+          </div>
+          <p className="text-lg text-center my-12 p-2">
+            {" "}
+            A od té doby máme tolik zážitků, že bychom vydali klidně i knihu.
+          </p>
+        </section>
+
+        <section
+          id="nase_svatba"
+          className="flex flex-col items-center w-100 bg-amber-50"
+        >
+        <Nadpis headingText="Naše svatba"></Nadpis>
+          <div className="flex flex-col justify-evenly items-center text-center py-16">
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-2">Kdy</h3>
+              <p className="text-gray-600">23. 9. 2023</p>
             </div>
 
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-2">Kde</h3>
+              <p className="text-gray-600">Resort Hulín</p>
+              <Image src={hulin} width={728} height={346} alt={"as"} />
+            </div>
 
-              </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2">Dresscode</h3>
+              <p className="text-gray-600">bordó a tmavě zelená barva</p>
+            </div>
           </div>
-            <p className="text-lg text-center my-12 p-2">
-              {" "}
-              A od té doby máme tolik zážitků, že bychom vydali klidně i knihu.
-            </p>
-        </section>
 
-        <section id="nase_svatba" className="flex flex-col items-center w-100 bg-amber-50">
-            <Nadpis headingText="Naše svatba"></Nadpis>
-            <div className="flex flex-col justify-evenly items-center text-center py-16">
-
-<div className="mb-8">
-  <h3 className="text-xl font-bold mb-2">Kdy</h3>
-  <p className="text-gray-600">23. 9. 2023</p>
-  
-</div>
-
-<div className="mb-8">
-  <h3 className="text-xl font-bold mb-2">Kde</h3>
-  <p className="text-gray-600">Resort Hulín</p>
-  <Image src={hulin} width={728} height={346} alt={"as"}/>
-</div>
-
-<div>
-  <h3 className="text-xl font-bold mb-2">Dresscode</h3>
-  <p className="text-gray-600">bordó a tmavě zelená barva</p>
-</div>
-
-</div>
-
-<div className="text-center py-8 flex flex-row gap-6">
-<Image
-        src={gold_heart}
-        width={50}
-        height={50}
-        alt="Picture of the author"
-      />
-<h2 className="text-3xl font-bold text-gray-800">Doufáme, že oslavíte tento den s námi!</h2>
-<Image
-        src={gold_heart}
-        width={50}
-        height={50}
-        alt="Picture of the author"
-      />
-</div>
-
-        </section>
-
-        <section className="flex flex-col items-center justify-center w-2/4 mx-auto ">
-          <div className="flex flex-row gap-6 mb-16">
+          <div className="text-center py-8 flex flex-row items-center gap-6">
             <Image
-              src={hearts_gold}
-              width={50}
-              height={50}
+              src={gold_heart}
+              className="object-cover max-w-[1.875rem] max-h-[2rem]"
+              width={30}
+              height={30}
               alt="Picture of the author"
             />
-            <h1 className="flex items-center  text-2xl font-semibold text-gray-900 ">
-              Harmonogram
-            </h1>
+            <h2 className={`${kaushan.className} text-3xl font-bold text-gray-800`}>
+              Doufáme, že oslavíte tento den s námi!
+            </h2>
             <Image
-              src={hearts_gold}
-              width={50}
-              height={50}
+              src={gold_heart}
+              width={30}
+              height={30}
               alt="Picture of the author"
             />
           </div>
+        </section>
+
+        <section className="flex flex-col items-center justify-center mb-10">
+          <Nadpis headingText="Svatební dary"/>
+          <p className="text-center w-[40rem] max-w-[95vw] text-lg">
+            Nějaký ten pátek žijeme už společně, proto nové sklenky jsou pro nás
+            již zbytečné. Chcete-li nás obdarovat, přidejte nám na cestu, kde si
+            ženich užije svoji milou nevěstu.
+          </p>
+        </section>
+
+        <Nadpis headingText="Harmonogram"/>
+        <section className="flex flex-col items-center justify-center w-2/4 max-w-full mx-auto ">
           <div className="flex flex-col  md:flex-row">
             <ol className="relative">
               <div className="hover:shadow-lg  harmonogram-item">
@@ -472,8 +462,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col mx-auto">
-          <a className="bg-[#e3c364] text-center text-white px-16 py-6 rounded-xl transition hover:bg-[#caab50] hover:underline">
+        <section className="flex flex-row justify-center items-center text-center mx-auto" id="RVPS">
+          <a className="bg-[#e3c364] w-[25rem] text-center text-white px-16 py-6 rounded-xl transition hover:bg-[#caab50] hover:underline">
             Zde potvrďte svou účast
           </a>
         </section>

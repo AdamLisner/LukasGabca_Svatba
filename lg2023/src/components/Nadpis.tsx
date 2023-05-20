@@ -7,14 +7,14 @@ interface StorySectionProps {
 
 export function Nadpis({ headingText }: StorySectionProps) {
   return (
-    <div className="flex flex-row gap-6 mb-16">
+    <div className="flex flex-row gap-6 mb-16 mx-auto text-center justify-center items-center">
       <Image
         src={hearts_gold}
         width={50}
         height={50}
         alt="Picture of the author"
       />
-      <h1 className="flex items-center text-2xl font-semibold text-gray-900">
+      <h1 className="flex items-center text-center text-2xl font-semibold text-gray-900">
         {headingText}
       </h1>
       <Image
