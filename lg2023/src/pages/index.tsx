@@ -92,8 +92,22 @@ export default function Home() {
           className=" bg-[url('../pages/assets/goldwatercolor.jpg')] bg-no-repeat bg-bottom bg-cover flex flex-col  items-center justify-center w-full max-w-full mx-auto border-[#e3c364] border-t-4 bg-opacity-20 text-gray-800"
         >
         <div className="flex flex-row justify-center mt-16 ">
-          <Nadpis headingText="Náš příběh" />
-        </div>
+        <div className="flex flex-row gap-6 mb-16 mx-auto text-center justify-center items-center max-w-[95vw] p-4 bg-white rounded-lg">
+      <Image
+        src={hearts_gold}
+        width={50}
+        height={50}
+        alt="Picture of the author"
+      />
+      <h1 className={`${cinzel.className} flex items-center text-center text-4xl  text-gray-900`}>
+Náš příběh      </h1>
+      <Image
+        src={hearts_gold}
+        width={50}
+        height={50}
+        alt="Picture of the author"
+      />
+    </div>        </div>
           <p className={`${cinzel.className} text-xl text-center mb-12 mx-2 bg-white p-4 rounded-xl`}>
             Před pěti lety jsme se díky vítězné fotografii ze čtyřhry seznámili
             a začali společnou cestu životem. <br /> S radostí se s Vámi
@@ -478,7 +492,7 @@ Harmonogram      </h1>
             </ol>
           </div>
         </section>
- <section className="flex flex-col items-center justify-center py-10 bg-[url('../pages/assets/gold_pink.jpg')] bg-no-repeat bg-center bg-cover ">
+ <section className="flex flex-col items-center justify-center pt-20 pb-10 bg-[url('../pages/assets/gold_pink.jpg')] bg-no-repeat bg-center bg-cover ">
           <Nadpis headingText="Svatební dary" />
           <p className={`${cinzel.className} text-center w-[40rem] max-w-[95vw] text-lg`}>
             <span className={`${cinzel.className} text-pink-200 text-3xl font-bold p-2 leading-3`}>„</span>
