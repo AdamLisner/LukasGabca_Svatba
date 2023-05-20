@@ -118,7 +118,7 @@ Náš příběh      </h1>
               <div className="  flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
                 <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all "></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full timeline invisible md:visible"></div>
-                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                <p className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}>
                   Na prvním místě stojí první polibek, který jsme si dali v
                   zámeckém parku na Dobříši v srpnu 2018.
                 </p>
@@ -126,7 +126,7 @@ Náš příběh      </h1>
               <div className="flex flex-col  justify-between items-center md:flex-row gap-6">
                 <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
-                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                <p className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}>
                   Těžko bychom zapomněli na naše první společné vaření, kdy jsme
                   si navzájem umíchali tatarák a spálili všechny topinky.
                 </p>
@@ -134,7 +134,7 @@ Náš příběh      </h1>
               <div className="flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
                 <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
-                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                <p className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}>
                   Vzpomínáme také na naše první Vánoce, které jsme strávili v
                   roce 2018, kdy byl Luky zasvěcen do našich tradic včetně{" "}
                   <i>"nákupu"</i> stromečku.
@@ -143,7 +143,7 @@ Náš příběh      </h1>
               <div className="flex flex-col justify-between items-center md:flex-row gap-6">
                 <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
-                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                <p className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}>
                   Dalším zážitkem byla naše první dovolená v Egyptě v březnu
                   roku 2019. Jako poslední jsme si nechali naše společné
                   bydlení, které započalo v září roku 2019.
@@ -495,11 +495,9 @@ Harmonogram      </h1>
  <section className="flex flex-col items-center justify-center pt-20 pb-10 bg-[url('../pages/assets/gold_pink.jpg')] bg-no-repeat bg-center bg-cover ">
           <Nadpis headingText="Svatební dary" />
           <p className={`${cinzel.className} text-center w-[40rem] max-w-[95vw] text-lg`}>
-            <span className={`${cinzel.className} text-pink-200 text-3xl font-bold p-2 leading-3`}>„</span>
             Nějaký ten pátek žijeme už společně, proto nové sklenky jsou pro nás
             již zbytečné. Chcete-li nás obdarovat, přidejte nám na cestu, kde si
             ženich užije svoji milou nevěstu.
-            <span className={`${cinzel.className} text-pink-200 text-3xl font-bold p-2 leading-3`}>“</span>
 
           </p>
           <a id="RSPV" href="https://forms.gle/ENKKjNzUjRcBLRYd7" className={`bg-[#e3c364] my-32 w-[25rem] max-w-[95vw] text-center text-white px-16 py-6 rounded-xl transition hover:bg-[#caab50] hover:underline ${cinzel.className} font-semibold`}>
