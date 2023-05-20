@@ -11,6 +11,11 @@ html{
     scroll-behavior: smooth;
 }
 
+body{ 
+    margin: 0;
+    padding:0;
+}
+
 .kaushan-script{
     font-family: 'Kaushan Script';
 }
@@ -24,9 +29,6 @@ html{
     height: 700px;
 }
 
-.darkened{
-    background-color: rgba(0, 0, 0, 0.15)
-}
 
 
 *,

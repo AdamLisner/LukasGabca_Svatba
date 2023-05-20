@@ -2,21 +2,22 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 
-import { Kaushan_Script } from "next/font/google"
+import { Kaushan_Script, Cinzel } from "next/font/google"
 
 
 const kaushan = Kaushan_Script({subsets: ["latin"], weight:"400"})
+const cinzel = Cinzel({subsets: ["latin"], weight:"600"})
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className="bg-white">
+    <div className="bg-[rgba(255,255,255,0.12)] border-[#e3c364] border-b-4 flex flex-row">
       <nav className="w-full text-gray-800  navbar z-999 transition-transform">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <a href="#">
-                <h2 className="text-2xl text-gray-800 font-bold">G&L</h2>
+                <h2 className={` ${cinzel.className} text-2xl text-gray-800 font-bold`}>G&L</h2>
               </a>
               <div className="md:hidden">
                 <button
@@ -64,8 +65,8 @@ export default function Navbar() {
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className='text-gray-800 font-semibold `${kaushan.className}`'>
-                  <Link href="#RVPS">
-                    <p className={kaushan.className}>RVPS</p>
+                  <Link href="https://forms.gle/ENKKjNzUjRcBLRYd7">
+                    <h2 className={`${cinzel.className} text-xl`}>RSPV</h2>
                   </Link>
                 </li>
               </ul>

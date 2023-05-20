@@ -4,28 +4,34 @@ import hearts_gold from "./assets/hearts_gold.png";
 import gold_heart from "./assets/gold_heart.png";
 import hulin from "./assets/hulin_resort.jpg";
 import { Nadpis } from "@/components/Nadpis";
+import { useRouter } from "next/router";
 
-
-import { Kaushan_Script } from "next/font/google"
+import { Kaushan_Script, Cinzel } from "next/font/google";
+const cinzel = Cinzel({subsets: ["latin"], weight: ["400", "500", "600"]})
+const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
 import { Open_Sans } from "next/font/google";
-
-const kaushan = Kaushan_Script({subsets: ["latin"], weight:"400"})
-const opensans = Open_Sans({subsets: ["latin"], weight:"400"})
+const opensans = Open_Sans({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
+  
+  const router = useRouter();
+  
+  const redirectToHulin = () => {
+    router.push("https://www.resorthulin.cz/")
+  };
   return (
     <>
-      <main className={`${kaushan.className}flex flex-col justify-center`}>
-        <section className="hero">
-            <Navbar />
-          <div className="relative z-0 overflow-hidden bg-[url('../pages/assets/gold_marble.jpeg')] bg-no-repeat bg-bottom bg-cover hero-image">
+      <main className={`flex flex-col justify-centerpb-0 mb-0`}>
+        <section className="hero bg-[url('../pages/assets/goldwatercolor.jpg')] bg-no-repeat bg-bottom bg-cover">
+          <Navbar />
+          <div className="relative z-0 overflow-hidden hero-image">
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed darkened">
               <div className="flex justify-center items-center h-full">
-                <div className="text-center text-white px-6 md:px-12">
-                  <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                    Luky a Gábinka
+                <div className="text-center text-gray-700 px-6 md:px-12">
+                  <h1 className={`${cinzel.className} text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12`}>
+                    Luky & Gábinka
                   </h1>
-                  <h3 className="text-2xl text-white">
+                  <h3 className={`${cinzel.className} text-2xl text-gray-700 `}>
                     Vítejte na našem svatebním webu
                   </h3>
                 </div>
@@ -33,88 +39,34 @@ export default function Home() {
             </div>
           </div>
         </section>
-<div className="flex flex-row justify-center mt-16">
-
-        <Nadpis  headingText="Náš příběh" />
-</div>
-        <section
-          id="our-story"
-          className="flex flex-col  items-center justify-center w-2/4 max-w-full mx-auto mt-6"
-        >
-
-          <p className="text-lg text-center mb-12 p-2">
-            Před pěti lety jsme se díky vítězné fotografii ze čtyřhry seznámili
-            a začali společnou cestu životem. <br /> S radostí se s Vámi
-            podělíme o pět našich nejkrásnějších prvních společných okamžiků.
-          </p>
-          <div className="flex flex-row   sm:flex-col">
-            <div className="flex flex-col gap-8  ">
-              <div className="  flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
-                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
-                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full timeline invisible md:visible"></div>
-                <p className="text-lg text-justify w-1/2 md:w-80 p-2">
-                  Na prvním místě stojí první polibek, který jsme si dali v
-                  zámeckém parku na Dobříši v srpnu 2018.
-                </p>
-              </div>{" "}
-              <div className="flex flex-col  justify-between items-center md:flex-row gap-6">
-                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
-                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
-                <p className="text-lg text-justify w-1/2 md:w-80">
-                  Těžko bychom zapomněli na naše první společné vaření, kdy jsme
-                  si navzájem umíchali tatarák a spálili všechny topinky.
-                </p>
-              </div>{" "}
-              <div className="flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
-                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
-                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
-                <p className="text-lg text-justify w-1/2 md:w-80 p-2">
-                  Vzpomínáme také na naše první Vánoce, které jsme strávili v
-                  roce 2018, kdy byl Luky zasvěcen do našich tradic včetně{" "}
-                  <i>"nákupu"</i> stromečku.
-                </p>
-              </div>
-              <div className="flex flex-col justify-between items-center md:flex-row gap-6">
-                <div className="w-80 h-60 bg-gray-500 max-w-[95vw]"></div>
-                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
-                <p className="text-lg text-justify w-1/2 md:w-80 p-2">
-                  Dalším zážitkem byla naše první dovolená v Egyptě v březnu
-                  roku 2019. Jako poslední jsme si nechali naše společné
-                  bydlení, které započalo v září roku 2019.
-                </p>
-              </div>
-            </div>
-          </div>
-          <p className="text-lg text-center my-12 p-2">
-            {" "}
-            A od té doby máme tolik zážitků, že bychom vydali klidně i knihu.
-          </p>
-        </section>
 
         <section
           id="nase_svatba"
-          className="flex flex-col items-center w-100 bg-amber-50"
+          className="flex flex-col items-center w-100 py-20 border-[#e3c364]  border-t-4"
         >
-        <Nadpis headingText="Naše svatba"></Nadpis>
-          <div className="flex flex-col justify-evenly items-center text-center py-16">
-            <div className="mb-8">
-              <h3 className="text-xl font-bold mb-2">Kdy</h3>
-              <p className="text-gray-600">23. 9. 2023</p>
+          <Nadpis headingText="Naše svatba"></Nadpis>
+          <div className="flex flex-col md:flex-row justify-evenly  gap-6 items-center text-center py-16">
+            <div className=" flex flex-col items-cemter justify-center mb-8 p-16 border-solid border-[#e3c364] border-4 w-60 h-60 hover:scale-105 transition-all">
+              <h3 className={`text-2xl font-bold mb-2 ${kaushan.className}`}>
+                Kdy
+              </h3>
+              <p className="text-gray-600 ">23. 9. 2023 </p>
             </div>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-bold mb-2">Kde</h3>
+            <div className="flex flex-col items-cemter justify-center mb-8 p-16 border-solid border-[#e3c364] border-4 w-60 h-60 hover:scale-105 transition-all">
+              <h3 className={`text-2xl font-bold mb-2 ${kaushan.className}`}>Kde</h3>
               <p className="text-gray-600">Resort Hulín</p>
-              <Image src={hulin} width={728} height={346} alt={"as"} />
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-2">Dresscode</h3>
+            <div className="flex flex-col items-cemter justify-center mb-8 p-16 border-solid border-[#e3c364] border-4 w-60 h-60 hover:scale-105 transition-all">
+              <h3 className={`text-2xl font-bold mb-2 ${kaushan.className}`}>Dresscode</h3>
               <p className="text-gray-600">bordó a tmavě zelená barva</p>
             </div>
           </div>
 
-          <div className="text-center py-8 flex flex-row items-center gap-6">
+            <Image className="mb-8 cursor-pointer" src={hulin} width={728} height={346} alt={"as"} onClick={redirectToHulin} />
+          <div className="text-center py-8 flex flex-row items-center gap-6 ">
+
             <Image
               src={gold_heart}
               className="object-cover max-w-[1.875rem] max-h-[2rem]"
@@ -122,7 +74,9 @@ export default function Home() {
               height={30}
               alt="Picture of the author"
             />
-            <h2 className={`${kaushan.className} text-3xl font-bold text-gray-800`}>
+            <h2
+              className={`${kaushan.className} text-3xl font-bold text-gray-800`}
+            >
               Doufáme, že oslavíte tento den s námi!
             </h2>
             <Image
@@ -133,19 +87,82 @@ export default function Home() {
             />
           </div>
         </section>
-
-        <section className="flex flex-col items-center justify-center mb-10">
-          <Nadpis headingText="Svatební dary"/>
-          <p className="text-center w-[40rem] max-w-[95vw] text-lg">
-            Nějaký ten pátek žijeme už společně, proto nové sklenky jsou pro nás
-            již zbytečné. Chcete-li nás obdarovat, přidejte nám na cestu, kde si
-            ženich užije svoji milou nevěstu.
+        <section
+          id="our-story"
+          className=" bg-[url('../pages/assets/goldwatercolor.jpg')] bg-no-repeat bg-bottom bg-cover flex flex-col  items-center justify-center w-full max-w-full mx-auto border-[#e3c364] border-t-4 bg-opacity-20 text-gray-800"
+        >
+        <div className="flex flex-row justify-center mt-16 ">
+          <Nadpis headingText="Náš příběh" />
+        </div>
+          <p className={`${cinzel.className} text-xl text-center mb-12 mx-2 bg-white p-4 rounded-xl`}>
+            Před pěti lety jsme se díky vítězné fotografii ze čtyřhry seznámili
+            a začali společnou cestu životem. <br /> S radostí se s Vámi
+            podělíme o pět našich nejkrásnějších prvních společných okamžiků.
+          </p>
+          <div className="flex flex-row   sm:flex-col">
+            <div className="flex flex-col gap-8  ">
+              <div className="  flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all "></div>
+                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full timeline invisible md:visible"></div>
+                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                  Na prvním místě stojí první polibek, který jsme si dali v
+                  zámeckém parku na Dobříši v srpnu 2018.
+                </p>
+              </div>{" "}
+              <div className="flex flex-col  justify-between items-center md:flex-row gap-6">
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all"></div>
+                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
+                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                  Těžko bychom zapomněli na naše první společné vaření, kdy jsme
+                  si navzájem umíchali tatarák a spálili všechny topinky.
+                </p>
+              </div>{" "}
+              <div className="flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all"></div>
+                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
+                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                  Vzpomínáme také na naše první Vánoce, které jsme strávili v
+                  roce 2018, kdy byl Luky zasvěcen do našich tradic včetně{" "}
+                  <i>"nákupu"</i> stromečku.
+                </p>
+              </div>
+              <div className="flex flex-col justify-between items-center md:flex-row gap-6">
+                <div className="w-80 h-60 bg-gray-500 max-w-[95vw] hover:scale-105 transition-all"></div>
+                <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
+                <p className={`${cinzel.className} text-lg text-justify w-1/2 md:w-80  p-4 rounded-lg`}>
+                  Dalším zážitkem byla naše první dovolená v Egyptě v březnu
+                  roku 2019. Jako poslední jsme si nechali naše společné
+                  bydlení, které započalo v září roku 2019.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p className={`${cinzel.className} text-lg text-center my-12 p-4 bg-white rounded-xl`}>
+            {" "}
+            A od té doby máme tolik zážitků, že bychom vydali klidně i knihu.
           </p>
         </section>
 
-        <Nadpis headingText="Harmonogram"/>
-        <section className="flex flex-col items-center justify-center w-2/4 max-w-full mx-auto ">
-          <div className="flex flex-col  md:flex-row">
+       
+
+        <section className=" flex py-20 flex-col items-center justify-center w-full  max-w-full mx-auto border-y-4 border-[#e3c364] ">
+        <div className="flex flex-row gap-6 mb-16 mx-auto max-x-[95vw] text-center justify-center items-center">
+      <Image
+        src={hearts_gold}
+        width={40}
+        height={42}
+        alt="Picture of the author"
+      />
+      <h1 className={`${cinzel.className} flex items-center text-center text-[30px]  text-gray-900`}>
+Harmonogram      </h1>
+      <Image
+        src={hearts_gold}
+        width={40}
+        height={42}
+        alt="Picture of the author"
+      />
+    </div>       ´
+       <div className="flex flex-col  md:flex-row">
             <ol className="relative">
               <div className="hover:shadow-lg  harmonogram-item">
                 <li className="mb-10 ml-6 md:mr-16 ">
@@ -167,7 +184,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                    <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Příjezd hostů
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -198,7 +215,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Obřad
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -223,7 +240,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Společné focení{" "}
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -252,7 +269,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Slavnostní oběd{" "}
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -277,7 +294,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Focení novomanželů{" "}
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -305,7 +322,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Krájení dortu, raut
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -363,7 +380,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Házení kytice a hry
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -396,7 +413,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       První tanec
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -423,7 +440,7 @@ export default function Home() {
                   </span>
 
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Focení s prskavkami
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -449,7 +466,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <div className="ml-4">
-                    <h3 className="flex items-center mb-1   text-lg font-semibold text-gray-900 ">
+                  <h3 className={`flex items-center mb-1   text-lg font-semibold text-gray-900 ${cinzel.className} `}>
                       Volná zábava
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -461,12 +478,23 @@ export default function Home() {
             </ol>
           </div>
         </section>
+ <section className="flex flex-col items-center justify-center py-10 bg-[url('../pages/assets/gold_pink.jpg')] bg-no-repeat bg-center bg-cover ">
+          <Nadpis headingText="Svatební dary" />
+          <p className={`${cinzel.className} text-center w-[40rem] max-w-[95vw] text-lg`}>
+            <span className={`${cinzel.className} text-pink-200 text-3xl font-bold p-2 leading-3`}>„</span>
+            Nějaký ten pátek žijeme už společně, proto nové sklenky jsou pro nás
+            již zbytečné. Chcete-li nás obdarovat, přidejte nám na cestu, kde si
+            ženich užije svoji milou nevěstu.
+            <span className={`${cinzel.className} text-pink-200 text-3xl font-bold p-2 leading-3`}>“</span>
 
-        <section className="flex flex-row justify-center items-center text-center mx-auto" id="RVPS">
-          <a className="bg-[#e3c364] w-[25rem] text-center text-white px-16 py-6 rounded-xl transition hover:bg-[#caab50] hover:underline">
+          </p>
+          <a id="RSPV" href="https://forms.gle/ENKKjNzUjRcBLRYd7" className={`bg-[#e3c364] my-32 w-[25rem] max-w-[95vw] text-center text-white px-16 py-6 rounded-xl transition hover:bg-[#caab50] hover:underline ${cinzel.className} font-semibold`}>
             Zde potvrďte svou účast
           </a>
         </section>
+       <footer className="bg-amber-200 w-full h-[8rem] border-t-4 border-[#e3c364] flex flex-col items-center justify-center">
+      <p className={` ${cinzel.className} text-[#b7993f]`}>© 2023 <a href="https://github.com/AdamLisner">Adam Lisner</a></p>
+       </footer>
       </main>
     </>
   );
