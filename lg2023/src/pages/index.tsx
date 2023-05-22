@@ -213,7 +213,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col  md:flex-row">
             <ol className="relative">
-              <div className="hover:shadow-lg  harmonogram-item">
+              <div >
                 <li className="mb-10 ml-6 md:mr-16 ">
                   <span className="absolute flex items-center justify-center w-8 h-8 bg-[#e3c364] rounded-full -left-4  ring-8 ring-[#e3c364]  ">
                     <svg
