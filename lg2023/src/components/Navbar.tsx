@@ -17,7 +17,7 @@ export default function Navbar() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <a href="#">
-                <h2 className={` ${cinzel.className} text-2xl text-gray-800 font-bold`}>G&L</h2>
+                <h2 className={` ${cinzel.className} text-2xl text-gray-800 font-bold`}>L&G</h2>
               </a>
               <div className="md:hidden">
                 <button

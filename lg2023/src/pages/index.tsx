@@ -175,7 +175,7 @@ Harmonogram      </h1>
         height={42}
         alt="Picture of the author"
       />
-    </div>       ´
+    </div>       
        <div className="flex flex-col  md:flex-row">
             <ol className="relative">
               <div className="hover:shadow-lg  harmonogram-item">
