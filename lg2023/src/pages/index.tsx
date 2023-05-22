@@ -5,12 +5,9 @@ import gold_heart from "./assets/gold_heart.png";
 import hulin from "./assets/hulin_resort.jpg";
 import { Nadpis } from "@/components/Nadpis";
 import { useRouter } from "next/router";
-import Head from 'next/head';
 import { Kaushan_Script, Cinzel } from "next/font/google";
 const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "500", "600"] });
 const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
-import { Open_Sans } from "next/font/google";
-const opensans = Open_Sans({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   const router = useRouter();
@@ -20,7 +17,16 @@ export default function Home() {
   };
   return (
     <>
-   
+    {/* <Head>
+      <title>Luky&Gábinka</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+	    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+	    <link rel="manifest" href="/site.webmanifest"/>
+	    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+	    <meta name="msapplication-TileColor" content="#da532c">
+	    <meta name="theme-color" content="#ffffff">
+    </Head> */}
       <main className={`flex flex-col justify-centerpb-0 mb-0`}>
         <section className="hero bg-[url('../pages/assets/goldwatercolor.jpg')] bg-no-repeat bg-bottom bg-cover">
           <Navbar />
@@ -47,7 +53,7 @@ export default function Home() {
           className="flex flex-col items-center w-100 py-20 border-[#e3c364]  border-t-4"
         >
           <Nadpis headingText="Naše svatba"></Nadpis>
-          <div className="flex flex-col md:flex-row justify-evenly  gap-6 items-center text-center py-16">
+          <div className="flex flex-col md:flex-row justify-evenly  gap-6 items-center text-center max-w-95 py-16">
             <div className=" flex flex-col items-cemter justify-center mb-8 p-16 border-solid border-[#e3c364] border-4 w-60 h-60 hover:scale-105 transition-all">
               <h3 className={`text-2xl font-bold mb-2 ${kaushan.className}`}>
                 Kdy
