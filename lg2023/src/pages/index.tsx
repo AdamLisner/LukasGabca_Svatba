@@ -140,7 +140,7 @@ export default function Home() {
           <div className="flex flex-row   sm:flex-col">
             <div className="flex flex-col gap-8  ">
               <div className="  flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
-                <div className="w-80 h-60 bg-[url('../pages/assets/couple_beach_hero.jpg')] bg-no-repeat bg-bottom bg-cover max-w-[95vw] hover:scale-105 transition-all "></div>
+                <div className="w-80 h-60 bg-[url('../pages/assets/image0.jpeg')] bg-no-repeat bg-bottom bg-cover max-w-[95vw] hover:scale-105 transition-all "></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full timeline invisible md:visible"></div>
                 <p
                   className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}
@@ -150,7 +150,7 @@ export default function Home() {
                 </p>
               </div>{" "}
               <div className="flex flex-col  justify-between items-center md:flex-row gap-6">
-                <div className="w-80 h-60  bg-[url('../pages/assets/couple_beach_hero.jpg')] bg-no-repeat bg-bottom bg-cover  max-w-[95vw] hover:scale-105 transition-all"></div>
+                <div className="w-80 h-60  bg-[url('../pages/assets/image1.jpg')] bg-no-repeat bg-center bg-cover  max-w-[95vw] hover:scale-105 transition-all"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
                 <p
                   className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}
@@ -160,7 +160,7 @@ export default function Home() {
                 </p>
               </div>{" "}
               <div className="flex flex-col  justify-between items-center md:flex-row md:flex-row-reverse gap-6">
-                <div className="w-80 h-60  bg-[url('../pages/assets/couple_beach_hero.jpg')] bg-no-repeat bg-bottom bg-cover  max-w-[95vw] hover:scale-105 transition-all"></div>
+                <div className="w-80 h-60  bg-[url('../pages/assets/image2.jpeg')] bg-no-repeat bg-bottom bg-cover  max-w-[95vw] hover:scale-105 transition-all"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
                 <p
                   className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}
@@ -171,7 +171,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col justify-between items-center md:flex-row gap-6">
-                <div className="w-80 h-60  bg-[url('../pages/assets/couple_beach_hero.jpg')] bg-no-repeat bg-bottom bg-cover  max-w-[95vw] hover:scale-105 transition-all"></div>
+                <div className="w-80 h-60  bg-[url('../pages/assets/image3.jpeg')] bg-no-repeat bg-center bg-cover  max-w-[95vw] hover:scale-105 transition-all"></div>
                 <div className="w-3.5 h-3.5 bg-[#e3c364] rounded-full invisible md:visible"></div>
                 <p
                   className={`${cinzel.className} text-lg text-center w-1/2 md:w-80  p-4 rounded-lg`}

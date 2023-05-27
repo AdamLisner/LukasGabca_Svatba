@@ -66,7 +66,7 @@ export default function Navbar() {
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className='text-gray-800 font-semibold `${kaushan.className}`'>
                   <Link href="https://forms.gle/ENKKjNzUjRcBLRYd7">
-                    <h2 className={`${cinzel.className} text-xl`}>RSPV</h2>
+                    <h2 className={`${cinzel.className} text-xl`}>RSVP</h2>
                   </Link>
                 </li>
               </ul>
