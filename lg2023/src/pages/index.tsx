@@ -135,7 +135,7 @@ export default function Home() {
           >
             Před pěti lety jsme se díky vítězné fotografii ze čtyřhry seznámili
             a začali společnou cestu životem. <br /> S radostí se s Vámi
-            podělíme o pět našich nejkrásnějších prvních společných okamžiků.
+            podělíme o pár našich nejkrásnějších okamžiků.
           </p>
           <div className="flex flex-row   sm:flex-col">
             <div className="flex flex-col gap-8  ">
